@@ -1,0 +1,59 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    checklist.txt                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: feralves < feralves@student.42sp.org.br    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/15 05:14:56 by feralves          #+#    #+#              #
+#    Updated: 2022/09/15 05:28:30 by feralves         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+[] choose between Debian and CentOs
+[] knowing the difference between systems
+[] difference between apt and aptitude
+[] difference between APPArmor and SElinux
+[] SSH only on port 4242
+[] set a new account
+	[] new account on SSH
+[] UFW only on port 4242
+[] firewall activated on boot
+[] change hostname to evaluator42
+	[] reboot with new hostname
+	[] change back hostname to original
+[] install sudo
+[] user with 42's login
+	[] has to be on groups user42 & sudo
+[] new user @ groups
+[] strong password policy
+	- has to expire every 30 days
+	- minimum days to change password is 2
+	- warning 7 days before expire
+	- password has to be a least 10 characters long
+	- must contain a uppercase, lowercase and number
+	- must not contain more than 3 consecutive identical characters
+	- password doesn't has username
+	- password has 7 different characters from previous
+	- root password has to comply
+[] strict rules for sudo
+	- limited to 3 attempts in the event of an incorrect password
+	- custom message for wrong password
+	- log has to be saved in the /var/log/sudo/ folder
+	- tyy mode has to be enabled
+	- paths used by sudo must be restricted /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+[] monitoring -> bash
+he architecture of your operating system and its kernel version.
+	[] The number of physical processors.
+	[] The number of virtual processors.
+	[] The current available RAM on your server and its utilization rate as a percentage.
+	[] The current available memory on your server and its utilization rate as a percentage.
+	[] The current utilization rate of your processors as a percentage.
+	[] The date and time of the last reboot.
+	[] Whether LVM is active or not.
+	[] The number of active connections.
+	[] The number of users using the server.
+	[] The IPv4 address of your server and its MAC (Media Access Control) address.
+	[] The number of commands executed with the sudo program.
+
+[] signature.txt -> must not change

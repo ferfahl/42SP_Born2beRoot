@@ -1,0 +1,88 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    main_commands.txt                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: feralves < feralves@student.42sp.org.br    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/15 05:30:06 by feralves          #+#    #+#              #
+#    Updated: 2022/09/15 05:49:06 by feralves         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+add user:
+	sudo adduser <username>
+
+remove user:
+	sudo deluser <username>
+
+verify password policy:
+	chage -l <username>
+
+list all users:
+	cat /etc/passwd | cut -d: -f1
+
+new group:
+	groupadd <namegroup>
+
+add user in group:
+	sudo usermod -aG <groupname> <usersudeme>
+	sudo gpasswd -a <usersudeme> <groupname>
+
+list groups:
+	groups <username>
+
+verify if user is in group:
+	getent group user42
+
+list all groups:
+	cat /etc/group | cut -d: -f1
+
+change hostaname:
+	sudo hostnamectl set-hostname <name>
+or
+	sudo vim /etc/hostname
+	sudo nano /etc/hosts
+
+cron:
+	crotab -e
+
+for not root:
+	sudo crotab -u root -e
+
+sudo systemctl enable cron
+sudo systemctl disable cron
+sudo systemctl stop cron
+
+ssh:
+	sudo service ssh status
+	ip: ip addr show
+
+login on another machine:
+	ssh <username>@<ip-address> -p 4242
+
+ufw:
+	sudo ufw status
+	sudo ufw allow <ports>
+	sudo ufw deny <ports>
+	sudo ufw delete deny <ports>
+
+path:
+	system: /etc/login.defs
+	pwquality: /etc/security/pwquality.conf
+	pwquality: /etc/pam.d/common-password
+	sudo: visudo or /etc/sudoers.tmp
+	rede: /etc/network/
+
+show partitions: lsblk
+
+show OS: uname -v
+
+sudo history command:
+	cat /var/log/sudo/sudo.log
+
+
+
+verify a program installed
+	dpkg -l | grep ufw
